@@ -1,7 +1,7 @@
 # This is an example mods.toml file.
 # Any fields that aren't annotated with #optional are *required*!
 modLoader = "javafml"
-loaderVersion = "[38,38.0.*]"
+loaderVersion = "[38,)"
 license = "GNU GPLv3"
 
 # This is a URL to e.g. your GitHub or CurseForge issues page.
@@ -47,6 +47,9 @@ side = "BOTH" # Specify where this mod is required: can be BOTH, CLIENT or SERVE
 [[dependencies.modtemplate]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.18,1.18.*]"
+# See above for how to read this notation, this essentially means any
+# version of Minecraft from 1.18 (inclusive) until 1.19 (exclusive),
+# so versions 1.18.* would be valid.
+versionRange = "[1.18,1.19)"
 ordering = "NONE"
 side = "BOTH"
